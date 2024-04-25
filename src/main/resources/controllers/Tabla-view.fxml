@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TablaController">
+<AnchorPane id="AnchorPane" prefHeight="433.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TablaController">
     <children>
-        <Button layoutX="25.0" layoutY="348.0" mnemonicParsing="false" onAction="#agregarPersona" prefHeight="25.0" prefWidth="149.0" text="Agregar persona" />
-        <TextField fx:id="txtNombre" layoutX="25.0" layoutY="88.0" />
-        <Label layoutX="25.0" layoutY="53.0" text="Nombre" />
-        <Label layoutX="25.0" layoutY="158.0" text="Apellidos" />
-        <TextField fx:id="txtApellidos" layoutX="25.0" layoutY="193.0" />
-        <TextField fx:id="txtEdad" layoutX="25.0" layoutY="287.0" />
-        <Label layoutX="25.0" layoutY="252.0" text="Edad" />
-        <TableView fx:id="tblPersonas" layoutX="220.0" layoutY="67.0" prefHeight="306.0" prefWidth="403.0">
+        <Button fx:id="btnAgregar" layoutX="16.0" layoutY="394.0" mnemonicParsing="false" onAction="#agregarPersona" prefHeight="25.0" prefWidth="149.0" text="Agregar persona" />
+        <TableView fx:id="tblPersonas" layoutX="15.0" layoutY="86.0" prefHeight="262.0" prefWidth="610.0">
             <columns>
-                <TableColumn fx:id="colNombre" prefWidth="147.0" text="Nombre" />
-                <TableColumn fx:id="colApellidos" prefWidth="145.0" text="Apellidos" />
-                <TableColumn fx:id="colEdad" prefWidth="105.0" text="Edad" />
+                <TableColumn fx:id="colNombre" prefWidth="215.0" text="Nombre" />
+                <TableColumn fx:id="colApellidos" prefWidth="237.0" text="Apellidos" />
+                <TableColumn fx:id="colEdad" prefWidth="123.0" text="Edad" />
             </columns>
         </TableView>
+        <Button fx:id="btnModificar" layoutX="235.0" layoutY="394.0" mnemonicParsing="false" onAction="#modificar" prefHeight="25.0" prefWidth="169.0" text="Modificar persona" />
+        <Button fx:id="btnEliminar" layoutX="467.0" layoutY="394.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="156.0" text="Eliminar persona" />
+        <Label layoutX="165.0" layoutY="35.0" text="Filtrar por nombre:" />
+        <TextField fx:id="txtFiltrarNombre" layoutX="279.0" layoutY="31.0" onKeyReleased="#filtrarNombre" />
     </children>
 </AnchorPane>

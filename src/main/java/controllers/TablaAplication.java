@@ -2,7 +2,6 @@ package controllers;
 
 import java.io.IOException;
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -14,7 +13,6 @@ public class TablaAplication extends Application {
     public void start(Stage primaryStage) {
 
         try {
-
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(TablaAplication.class.getResource("Tabla-view.fxml"));
 
@@ -29,9 +27,6 @@ public class TablaAplication extends Application {
         }
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }
